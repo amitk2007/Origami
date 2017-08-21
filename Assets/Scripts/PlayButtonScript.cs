@@ -9,7 +9,7 @@ public class PlayButtonScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        move = false;
     }
 
     // Update is called once per frame

@@ -17,7 +17,7 @@ public class DrawScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        canDraw = true;
     }
 
     // Update is called once per frame
@@ -53,6 +53,7 @@ public class DrawScript : MonoBehaviour
     #region moving the player
     private void OnMouseDown()
     {
+        print(canDraw);
         DeleteLineAndPoints();
     }
 
@@ -145,7 +146,6 @@ public class DrawScript : MonoBehaviour
         string tag = gameObject.transform.tag;
         DeleteLineAndPoints();
         Destroy(gameObject);
-        print(GameObject.FindGameObjectsWithTag(tag).Length + " tag = " + tag);
         if (GameObject.FindGameObjectsWithTag(tag).Length <= 1)
         {
             Application.LoadLevel(Application.loadedLevel + 1);
