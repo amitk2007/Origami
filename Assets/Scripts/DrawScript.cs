@@ -53,7 +53,6 @@ public class DrawScript : MonoBehaviour
     #region moving the player
     private void OnMouseDown()
     {
-        print(canDraw);
         DeleteLineAndPoints();
     }
 
